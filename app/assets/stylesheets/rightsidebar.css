@@ -1,0 +1,34 @@
+@media only screen and (max-width: 767px) {
+    .sidebar-navbar {
+        display: none;
+    }
+}
+
+.sidebar-navbar {
+	top: 0px; right: 0px;
+	height: 100%; width: 55px;
+	background-color: #424242;
+	position: fixed;
+	padding: 4px;
+}
+
+.sidebar-navbar .user-form {
+	margin-top: 40px;
+}
+
+.sidebar-navbar button {
+	border-radius: 0px;
+	border: 0px;
+	padding: 15px;
+	margin-bottom: 5px;
+	background-color: #424242;
+}
+
+.sidebar-navbar span {
+	color: white;
+	font-size: 18px;
+}
+
+.sidebar-navbar button:hover {
+	background-color: #575757;
+}
