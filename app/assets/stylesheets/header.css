@@ -1,0 +1,75 @@
+body {
+    font-family: Helvetica;
+}
+
+.header-navbar {
+    background-color: #246bb6;
+    font-size: 13px;
+    box-shadow: 1px 1px 1px 1px #9a9a9a;
+    border: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.header-navbar .navbar-header .navbar-brand {
+    color: white;
+    padding-left: 35px; padding-right: 35px;
+}
+
+.header-navbar .navbar-collapse ul li:hover {
+    background-color: #23659b;
+
+}
+
+.header-navbar .navbar-collapse ul li a {
+    color: white !important;
+}
+
+.header-navbar .navbar-collapse .search-form input {
+    width: 100%;
+    min-width: 350px;
+    border: 0px; border-radius: 0px;
+}
+
+.header-navbar .navbar-collapse .search-form button {
+    border-radius: 0px;
+    background-color: #fb485e;
+    color: white;
+    border: 0px;
+    height: 34px;
+    padding-left: 15px; padding-right: 15px;
+}
+
+
+
+
+.header-background {
+    background: url(http://hdwallweb.com/wp-content/uploads/2014/02/24/spring-pictures-nature-wallpaper-hd-.jpg);
+    height: 310px;
+    margin-bottom: 0px;
+}
+
+
+
+
+.header-themes-list-navbar {
+    background-color: #e2e2e2;
+    font-size: 13px;
+    border: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-themes-list-navbar .navbar-collapse ul {
+    text-align: center !important;
+}
+
+.header-themes-list-navbar .navbar-collapse .navbar-left li {
+    border-right: 1px solid #c8c8c8;
+}
+
+.header-themes-list-navbar .navbar-collapse .navbar-left li a {
+    padding: 8px 20px;
+}
