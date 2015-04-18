@@ -10,6 +10,7 @@
 	background-color: #424242;
 	position: fixed;
 	padding: 4px;
+	z-index: 3;
 }
 
 .sidebar-navbar .user-form {
@@ -31,4 +32,10 @@
 
 .sidebar-navbar button:hover {
 	background-color: #575757;
+}
+
+.sidebar-navbar .setting-form {
+	border-top: 1px solid #f8f8f8;
+	margin-top: 250px;
+	padding-top: 20px;
 }

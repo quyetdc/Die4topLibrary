@@ -1,0 +1,13 @@
+.category-group .active {
+	font-size: 15px;
+}
+
+.category-group span {
+	margin-right: 12px;
+}
+
+.category-group .badge {
+	margin-right: 3px;
+	background-color: #e2617d;
+	color: white;
+}
