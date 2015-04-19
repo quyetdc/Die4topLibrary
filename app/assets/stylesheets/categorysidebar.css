@@ -11,3 +11,23 @@
 	background-color: #e2617d;
 	color: white;
 }
+
+.subscribe-group {
+	border: 1px solid #d5d5d5;
+}
+
+.subscribe-group .panel-heading {
+	font-size: 15px;
+}
+
+.subscribe-group span {
+	margin-right: 8px;
+}
+
+.subscribe-group input {
+	margin-bottom: 8px;
+}
+
+.subscribe-group button {
+	width: 100%;
+}
