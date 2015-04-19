@@ -1,0 +1,121 @@
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+body {
+	font-family: Helvetica;
+	font-size: 13px;
+}
+
+.footer-support-body {
+	padding: 20px;
+	background-color: #2959a3;
+}
+
+.footer-support-body .support-list {
+
+}
+
+.footer-support-body .support-list .title {
+	width: 100%;
+	padding-top: 13px; padding-bottom: 12px;
+	border-radius: 10px;
+	background-color: #478bcd;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+}
+
+.footer-support-body .support-list ul {
+	list-style: none;
+}
+
+.footer-support-body .support-list ul li {
+	padding: 12px 15px;
+	border-radius: 10px;
+}
+
+.footer-support-body .support-list ul li:hover {
+	background-color: #68c5bc;
+}
+
+.footer-support-body .support-list ul li a {
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+
+.footer-introduce-body {
+	padding: 20px;
+	background-color: #f8f8f8;
+}
+
+.footer-introduce-body .introduce-body-center p {
+	font-size: 12px;
+}
+
+.footer-introduce-body .introduce-body-center .title {
+	margin-top: 0px; margin-bottom: 18px;
+	width: 150px;
+	padding: 6px 12px;
+	font-size: 13px;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	background-color: #68c5bc;
+}
+
+.footer-introduce-body .introduce-body-center table {
+	margin-bottom: 5px;
+}
+
+.footer-introduce-body .introduce-body-center .copy-right-group {
+	text-align: center;
+	padding: 10px; padding-bottom: 0px;
+	border: 1px solid #d4d4d4;
+}
+
+.footer-introduce-body .introduce-body-center .copy-right-group p {
+	line-height: 15px;
+}
+
+.footer-introduce-body .introduce-body-right {
+	border-left: 1px solid #555555;
+}
+
+.footer-introduce-body .introduce-body-right .title {
+	margin-top: 0px; margin-bottom: 18px;
+	width: 100%;
+	padding: 8px 12px;
+	font-size: 13px;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	background-color: #d36b9e;
+}
+
+
+.footer-introduce-body .introduce-body-right .form-group {
+	text-align: center;
+}
+
+.footer-introduce-body .introduce-body-right .form-group button {
+	padding: 12px 18px;
+	margin: 0px 2px 7px 2px;
+	color: white;
+	font-size: 18px;
+	background-color: #424242;
+}
+
+.footer-introduce-body .introduce-body-right .form-group button:hover {
+	background-color: #575757;
+
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 1200ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: 1;
+
+/*    -webkit-animation: spin 4s infinite linear;*/
+}

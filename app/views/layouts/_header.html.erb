@@ -1,78 +1,104 @@
-<nav class="navbar navbar-default header-navbar">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Die4Top</a>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          var s = $("#navbar-2");
+          var pos = s.position();                    
+          $(window).scroll(function() {
+              var windowpos = $(window).scrollTop();
+
+              if (windowpos >= pos.top) {
+                  s.addClass("fixed");
+                  $(".header-themes-list-navbar .navbar-header .navbar-brand").show(300);
+              } else {
+                  s.removeClass("fixed"); 
+                  $(".header-themes-list-navbar .navbar-header .navbar-brand").hide(300);
+              }
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default header-navbar" id="navbar-1">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Die4Top</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-left search-form" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search any books, authors or categories...">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Sign up?</a></li>
+          </ul>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron header-background">
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Feedback</a></li>
-        <li><a href="#">About us</a></li>
-      </ul>
-
-      <form class="navbar-form navbar-left search-form" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search any books, authors or categories...">
+    <nav class="navbar navbar-default header-themes-list-navbar" id="navbar-2">
+      <div class="container-fluid">
+      	<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Die4Top</a>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign in</a></li>
-        <li><a href="#">Sign up?</a></li>
-      </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Văn hoá - Nghệ thuật</a></li>
+            <li><a href="#">Truyện tranh</a></li>
+            <li><a href="#">Thường thức - Đời sống</a></li>
+            <li><a href="#">Du lịch</a></li>
+            <li><a href="#">Kỹ năng sống</a></li>
+            <li><a href="#">Học tập</a></li>
+            <li><a href="#">Kinh tế</a></li>
+            <li><a href="#">Khoa học</a></li>
+            <li><a href="#">Văn học</a></li>
+            <li><a href="#">Tiểu thuyết</a></li>
+          </ul>
 
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="jumbotron header-background">
-</div>
-
-<nav class="navbar navbar-default header-themes-list-navbar">
-  <div class="container-fluid">
-  	<div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Văn hoá - Nghệ thuật</a></li>
-        <li><a href="#">Truyện tranh</a></li>
-        <li><a href="#">Thường thức - Đời sống</a></li>
-        <li><a href="#">Du lịch</a></li>
-        <li><a href="#">Kỹ năng sống</a></li>
-        <li><a href="#">Học tập</a></li>
-        <li><a href="#">Kinh tế</a></li>
-        <li><a href="#">Khoa học</a></li>
-        <li><a href="#">Văn học</a></li>
-        <li><a href="#">Tiểu thuyết</a></li>
-      </ul>
-
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-        	<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-          	<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-        </div>
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+            	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              	<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            </div>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </body>
+</html>

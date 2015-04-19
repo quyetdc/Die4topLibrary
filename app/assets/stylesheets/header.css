@@ -2,6 +2,14 @@ body {
     font-family: Helvetica;
 }
 
+.fixed {
+    position:fixed; 
+    top:0; 
+    left:0; 
+    z-index:3; 
+    width:100%;
+}
+
 .header-navbar {
     background-color: #246bb6;
     font-size: 13px;
@@ -58,6 +66,12 @@ body {
     padding-bottom: 10px;
 }
 
+.header-themes-list-navbar .navbar-header .navbar-brand {
+    display: none;
+    height: 35px;
+    padding: 5px 35px; padding-top: 7px;
+}
+
 .header-themes-list-navbar .navbar-collapse ul {
     text-align: center !important;
 }
@@ -71,7 +85,6 @@ body {
 }
 
 .header-themes-list-navbar .navbar-collapse .navbar-right .form-group {
-
 }
 
 .header-themes-list-navbar .navbar-collapse .navbar-right .form-group span {
