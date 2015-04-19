@@ -5,11 +5,37 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <style type="text/css">
+	  @media only screen and (max-width: 767px) {
+	    .body-right {
+	        display: none;
+	    }
+
+	    .body-left {
+	    	width: 100% !important;
+	    }
+	}
+
+  	.body-left {
+  		width: 96%;
+  		float: left;
+  	}
+
+  	.body-right {
+  		width: 4%;
+  		float: left;
+  	}
+  </style>
 </head>
 <body>
-	<%= render "layouts/header" %>
-	<%= render "layouts/rightsidebar" %>
-	<%= yield %>
-	<%= render "layouts/footer" %>
+	<div class="body-left">
+		<%= render "layouts/header" %>
+		<%= yield %>
+		<%= render "layouts/footer" %>
+	</div>
+	<div class="body-right">
+		<%= render "layouts/rightsidebar" %>
+	</div>
 </body>
 </html>
