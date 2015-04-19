@@ -30,6 +30,14 @@
 
 .sidebar-navbar .setting-form {
 	border-top: 1px solid #f8f8f8;
-	margin-top: 250px;
+	margin-top: 200px;
 	padding-top: 20px;
+}
+
+.sidebar-navbar .setting-form #scroll-top-btn {
+	display: none;
+	border-radius: 30px;
+	background-color: #37ccbb;
+	color: white;
+	padding: 9px 11px; margin-left: 5px; margin-bottom: 15px;
 }

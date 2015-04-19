@@ -1,6 +1,24 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/leftsidebar.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 50) {
+						$('#scroll-top-btn').show(300);
+					} else {
+						$('#scroll-top-btn').hide(300);
+					}
+				});
+
+				$('#scroll-top-btn').click(function(){
+					$('html, body').animate({scrollTop : 0}, 300);
+					return false;
+				});
+			});
+		</script>
 	</head>
 
 	<div class="sidebar-navbar">
@@ -19,6 +37,8 @@
 
 		<div class="form-group setting-form">
 			<div class="row">
+				<div class="col-md-12">
+				<button type="button" class="btn btn-default" id="scroll-top-btn"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button></div>
 				<div class="col-md-12">
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span></button></div>
 				<div class="col-md-12">

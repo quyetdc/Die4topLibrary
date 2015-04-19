@@ -6,3 +6,57 @@ body {
 	font-family: Helvetica;
 	font-size: 13px;
 }
+
+.books-group {
+
+}
+
+.books-group .book-group-title {
+	padding: 10px 20px;
+	font-size: 19px;
+	border-bottom: 6px solid #37ccbb;
+	margin-bottom: 30px;
+}
+
+.books-group .book-group-title span {
+	margin-right: 8px;
+}
+
+.books-group .book-row {
+	margin-bottom: 10px;
+}
+
+.books-group .sub-book {
+	padding: 5px;
+	border: 1px solid #d4d4d4;
+	margin-bottom: 30px;
+}
+
+.books-group .sub-book img {
+	width: 100%;
+}
+
+.books-group .sub-book .title {
+	width: 100%;
+	padding-top: 10px; padding-bottom: 10px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.books-group .sub-book .rating-form {
+	text-align: center;
+	font-size: 17px;
+}
+
+.books-group .sub-book button {
+	width: 100%;
+	padding-top: 10px; padding-bottom: 10px;
+	color: white;
+	background-color: #cc689b;
+	border-radius: 0px;
+}
+
+.books-group .sub-book button span {
+	margin-right: 10px;
+}

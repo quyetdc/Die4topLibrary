@@ -20,7 +20,7 @@ body {
 .footer-support-body .support-list .title {
 	width: 100%;
 	padding-top: 13px; padding-bottom: 12px;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #478bcd;
 	color: white;
 	font-size: 15px;
@@ -83,7 +83,7 @@ body {
 }
 
 .footer-introduce-body .introduce-body-right {
-	border-left: 1px solid #555555;
+	border-left: 1px solid #d4d4d4;
 }
 
 .footer-introduce-body .introduce-body-right .title {
