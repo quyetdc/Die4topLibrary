@@ -31,3 +31,39 @@
 .subscribe-group button {
 	width: 100%;
 }
+
+.author-group {
+	border: 1px solid #d5d5d5;
+}
+
+.author-group .panel-heading {
+	font-size: 15px;
+	background-color: #4dad4a;
+	color: white;
+}
+
+.author-group .sub-author-form {
+	padding: 5px;
+	border: 1px solid #d4d4d4;
+	margin-bottom: 10px;
+}
+
+.author-group .sub-author-form img {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.author-group .sub-author-form button {
+	width: 100%;
+	border-radius: 0px;
+	padding-top: 4px; padding-bottom: 4px;
+	font-size: 13px;
+}
+
+.author-group .sub-author-form span {
+	margin-right: 5px;
+	font-size: 13px;
+}
+
+
+
