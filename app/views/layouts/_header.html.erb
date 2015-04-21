@@ -24,17 +24,6 @@
             $('#myInput').focus()
           })
 
-          // Show login form by button "Đăng nhập"
-          $('#signInForm').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('whatever') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            modal.find('.modal-title').text(New message to ' + recipient)'
-            modal.find('.modal-body input').val(recipient)
-          })  
-
       });
     </script>
   </head>
@@ -72,7 +61,7 @@
           <ul class="nav navbar-nav navbar-right">
             <% unless user_signed_in? %>
               <li><a href="#" data-toggle="modal" data-placement="bottom" data-target="#signInForm" data-whatever="">Đăng nhập</a></li>
-              <li><a href="#">Đăng ký</a></li>
+              <li><a href="#" data-toggle="modal" data-placement="bottom" data-target="#signUpForm" data-whatever="">Đăng ký</a></li>
             <% else %>
               <li><%= link_to current_user.email, '' %></li>
               <li><%= link_to "Đăng xuất", destroy_user_session_path, data: { confirm: "Bạn có chắc chắn muốn đăng xuất tài khoản hiện tại không?" } %></li>
@@ -84,9 +73,9 @@
 
     <!-- THIS IS SIGN IN FORM -->
 
-    <div class="modal fade sign-in-form" id="signInForm" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal fade sign-in-sign-up-form" id="signInForm" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content sign-in-form-main-body">
+        <div class="modal-content sign-in-sign-up-form-main-body">
 
             
             <div class="title">
@@ -95,12 +84,11 @@
             </div>
 
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <form class="sign-in-account-group new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+              <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                <form class="sign-in-sign-up-account-group new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
                   <input name="utf8" type="hidden" value="✓">
                   <input type="hidden" name="authenticity_token" value="F12A6k0Jw6+n3R/RMkvTFrM50NEUojk/vR1uWUac4DTrQ6OXC9zJSxoYaHxz0E2Cew/y0kIL/z6yPnuYcZVhyQ==">
-                  <input name="utf8" type="hidden" value="✓">
-                  <input type="hidden" name="authenticity_token" value="F12A6k0Jw6+n3R/RMkvTFrM50NEUojk/vR1uWUac4DTrQ6OXC9zJSxoYaHxz0E2Cew/y0kIL/z6yPnuYcZVhyQ==">
+                  
                   <input type="email" class="form-control" id="recipient-name" autofocus="autofocus" value="" name="user[email]" id="user_email" placeholder="Email">
                   <input type="password" class="form-control" id="recipient-name" autocomplete="off" name="user[password]" id="user_password" placeholder="Mật khẩu">
 
@@ -115,6 +103,44 @@
                     <button type="button" class="btn btn-info" name="commit" value="Log in"><a href="/users/sign_up">Đăng ký</a></button>
                     <button type="submit" class="btn btn-success" name="commit" value="Log in">Đăng nhập</button>
                   </div>
+                </form>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- -->
+
+    <!-- THIS IS SIGN UP FORM -->
+
+    <div class="modal fade sign-in-sign-up-form" id="signUpForm" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content sign-in-sign-up-form-main-body">
+
+            
+            <div class="title">
+              <p>Đăng ký tài khoản</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                <form class="sign-in-sign-up-account-group new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post">
+                  <input name="utf8" type="hidden" value="✓">
+                  <input type="hidden" name="authenticity_token" value="1w/NKo2GcGogXc7vlspwdesdZniWYXFiOU2bRgQXrZmH3pAAsZsbt5QgWCgyEguHn0BZjCfnmcd/gXctCa0u6g==">
+
+                  <input class="form-control" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="Email">
+                  <input class="form-control" autocomplete="off" type="password" name="user[password]" id="user_password" placeholder="Mật khẩu">
+                  <input class="form-control" autocomplete="off" type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Xác nhận mật khẩu">
+
+                  <div class="form-group button-form">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-success" name="commit" value="Sign up"><a href="/users/sign_up">Đăng ký</a></button>
+                    
+                  </div>
+
                 </form>
               </div>
             </div>

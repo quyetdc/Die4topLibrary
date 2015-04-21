@@ -114,17 +114,17 @@ body {
 
 
 
-.sign-in-form {
+.sign-in-sign-up-form {
 
 }
 
-.sign-in-form .sign-in-form-main-body {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body {
     border-radius: 0px;
     max-width: 380px; 
     margin: auto;
 }
 
-.sign-in-form .sign-in-form-main-body .title {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .title {
     width: 100%;
     padding-top: 14px; padding-bottom: 14px;
     text-align: center;
@@ -133,7 +133,7 @@ body {
     background-color: #4cb3d7;
 }
 
-.sign-in-form .sign-in-form-main-body .title button {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .title button {
     margin-top: -35px;
     font-size: 25px;
     margin-right: 20px;
@@ -141,42 +141,42 @@ body {
     opacity: 0.5;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group {
     margin-top: 30px; margin-bottom: 10px;
     padding: 5px;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group input {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group input {
     border-radius: 0px;
     margin-bottom: 5px;
     text-align: center;
     border: 1px solid #d9d9d9;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group .checking-account-form {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .checking-account-form {
     width: 100%;
     padding-top: 5px; padding-bottom: 5px;
     margin-top: 10px; margin-bottom: 0px;
 }
 
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group .checking-account-form a {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .checking-account-form a {
     float: right;
     text-decoration: none;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group .button-form {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .button-form {
     text-align: center;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group .button-form button {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .button-form button {
     width: 146px;
     margin-right: 1px; margin-left: 1px;
     margin-top: 5px;
     padding-top: 8px; padding-bottom: 8px;
 }
 
-.sign-in-form .sign-in-form-main-body .sign-in-account-group .button-form button a {
+.sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .button-form button a {
     text-decoration: none;
     color: white;
 }

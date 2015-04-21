@@ -21,3 +21,24 @@
  	src: url('/fonts/glyphicons-halflings-regular.eot'); 
  	src: url('/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); 
  }
+
+
+@media only screen and (max-width: 767px) {
+    .body-right {
+        display: none;
+    }
+
+    .body-left {
+    	width: 100% !important;
+    }
+}
+
+.body-left {
+	width: 96%;
+	float: left;
+}
+
+.body-right {
+	width: 4%;
+	float: right;
+}
