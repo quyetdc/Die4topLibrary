@@ -23,29 +23,27 @@
 
 	<div class="sidebar-navbar">
 		<div class="form-group user-form">
-			<div class="row">
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></div>
-			</div>
+			<ul>
+				<% if user_signed_in? %>
+					<% if current_user.role?(:administrator) %>
+						<li id="admin-li"><%= link_to "A", admin_root_path, id: "admin-link" %></span></li>
+					<% end %>
+				<% end %>
+				<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span></a></li>
+			</ul>
 		</div>
 
 		<div class="form-group setting-form">
-			<div class="row">
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default" id="scroll-top-btn"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></button></div>
-				<div class="col-md-12">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></button></div>
-			</div>
+			<ul>
+				<li id="scroll-top-btn"><a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
+			</ul>
+
 		</div>
 
 	</div>

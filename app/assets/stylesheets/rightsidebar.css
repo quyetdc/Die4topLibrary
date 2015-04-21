@@ -1,3 +1,8 @@
+button a {
+	text-decoration: none;
+	color: white;
+}
+
 .sidebar-navbar {
 	top: 0px; right: 0px;
 	height: 100%; width: 57px;
@@ -11,12 +16,21 @@
 	margin-top: 40px;
 }
 
-.sidebar-navbar button {
-	border-radius: 0px;
-	border: 0px;
+.sidebar-navbar ul {
+	list-style: none;
+	margin-left: -40px;
+	display: block;
+}
+
+.sidebar-navbar ul li {
 	padding: 15px;
 	margin-bottom: 5px;
-	background-color: #424242;
+	margin-left: 0px;
+
+}
+
+.sidebar-navbar ul li:hover {
+	background-color: #575757;
 }
 
 .sidebar-navbar span {
@@ -24,20 +38,48 @@
 	font-size: 18px;
 }
 
-.sidebar-navbar button:hover {
-	background-color: #575757;
+.sidebar-navbar .user-form {
+
 }
+
+
+.sidebar-navbar .user-form #admin-li a {
+	color: white;
+	padding: 14px 17px;
+	background-color: #d17950;
+	font-size: 16px;
+	border-radius: 30px;
+	margin-left: -13px;
+	text-decoration: none;
+}
+
+.sidebar-navbar .user-form #admin-li:hover {
+	background-color: #424242;
+}
+
 
 .sidebar-navbar .setting-form {
 	border-top: 1px solid #f8f8f8;
-	margin-top: 200px;
+	margin-top: 140px;
 	padding-top: 20px;
 }
 
 .sidebar-navbar .setting-form #scroll-top-btn {
 	display: none;
+	margin-bottom: 15px;
+}
+
+.sidebar-navbar .setting-form #scroll-top-btn:hover {
+	background-color: #424242;
+}
+
+.sidebar-navbar .setting-form #scroll-top-btn a {
 	border-radius: 30px;
+	padding: 16px 14px;
+	margin-left: -13px;
 	background-color: #37ccbb;
 	color: white;
-	padding: 9px 11px; margin-left: 5px; margin-bottom: 15px;
 }
+
+
+
