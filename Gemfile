@@ -45,3 +45,6 @@ end
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'cancancan'
