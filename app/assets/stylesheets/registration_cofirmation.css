@@ -1,0 +1,114 @@
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+body {
+	font-family: Helvetica;
+	font-size: 14px;
+	background-color: #f1f1f1;
+}
+
+.registration-mail-body {
+	background-color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-top: 12px solid #4cb3d7;
+}
+
+.registration-mail-body .header-form {
+	padding-top: 15px; padding-bottom: 15px;
+	font-size: 17px;
+	text-align: center;
+	border-bottom: 1px solid #d1d1d1;
+	margin-bottom: 20px;
+}
+
+.registration-mail-body .header-form .title {
+	font-size: 28px;
+	color: #4a4a4a;
+	padding-left: 15px; padding-right: 15px;
+}
+
+.registration-mail-body .body-form {
+	padding: 10px 30px;
+	width: auto;
+	text-align: justify;
+}
+
+.registration-mail-body .body-form .title {
+	font-size: 21px;
+	color: #3a3a3a;
+	margin-top: 5px; margin-bottom: 10px;
+}
+
+.registration-mail-body .body-form .form-group {
+	margin-top: 5px; margin-bottom: 5px;
+	padding: 10px;
+	font-size: 17px;
+}
+
+.registration-mail-body .body-form .form-group p {
+	margin-bottom: 5px;
+}
+
+.registration-mail-body .body-form .form-group .user-info-form {
+	padding: 25px;
+	margin-top: 20px; margin-bottom: 30px;
+	text-align: center;
+	border: 1px solid #d1d1d1;
+}
+
+.registration-mail-body .body-form .form-group .user-info-form table {
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+
+.registration-mail-body .footer-form {
+	background-color: #4cb3d7;
+	padding: 10px 30px;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+}
+
+.registration-mail-body .footer-form .sub-form {
+	margin-top: 10px; margin-bottom: 20px;
+	text-align: center;
+	line-height: 16px;
+}
+
+
+
+.registration-mail-body .footer-form .connecting-us-form {
+	text-align: center;
+	color: white;
+}
+
+.registration-mail-body .footer-form .connecting-us-form .title {
+	padding-top: 15px;
+	border-top: 1px solid #d1d1d1;
+	font-size: 17px;
+}
+
+
+.registration-mail-body .footer-form .connecting-us-form button {
+	padding: 8px 13px;
+	margin: 0px 3px;
+	color: white;
+	font-size: 18px;
+	background-color: #424242;
+	border: 0px;
+}
+
+.registration-mail-body .footer-form .connecting-us-form button:hover {
+	background-color: #575757;
+
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 1200ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: 1;
+
+/*    -webkit-animation: spin 4s infinite linear;*/
+}

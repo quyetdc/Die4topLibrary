@@ -1,6 +1,6 @@
 <html>
   <head>
-
+    <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/header.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script>
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Die4Top Library</a>
+          <%= link_to "Die4Top Library", root_path, class: "navbar-brand" %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -132,13 +132,14 @@
                   <input type="hidden" name="authenticity_token" value="1w/NKo2GcGogXc7vlspwdesdZniWYXFiOU2bRgQXrZmH3pAAsZsbt5QgWCgyEguHn0BZjCfnmcd/gXctCa0u6g==">
 
                   <input class="form-control" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="Email">
+                  <input class="form-control" id="user_fullname" type="text" name="user[fullname]" placeholder="Họ và tên">
+                  <input class="form-control" id="user_nickname" type="text" name="user[nickname]" placeholder="Biệt danh">
                   <input class="form-control" autocomplete="off" type="password" name="user[password]" id="user_password" placeholder="Mật khẩu">
                   <input class="form-control" autocomplete="off" type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Xác nhận mật khẩu">
 
                   <div class="form-group button-form">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Đóng</button>
-                    <button type="submit" class="btn btn-success" name="commit" value="Sign up"><a href="/users/sign_up">Đăng ký</a></button>
-                    
+                    <button class="btn btn-info" type="button" data-dismiss="modal">Đóng</button>
+                    <button class="btn btn-success" type="submit" name="commit" value="Create User">Đăng ký</button>
                   </div>
 
                 </form>

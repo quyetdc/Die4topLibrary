@@ -167,6 +167,8 @@ body {
 
 .sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .button-form {
     text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #d9d9d9;
 }
 
 .sign-in-sign-up-form .sign-in-sign-up-form-main-body .sign-in-sign-up-account-group .button-form button {
