@@ -1,5 +1,17 @@
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 		<style type="text/css">
 			@-webkit-keyframes spin {
 			    0%  {-webkit-transform: rotate(0deg);}
@@ -35,7 +47,7 @@
 			}
 
 			.registration-mail-body .body-form {
-				padding: 10px 30px;
+				padding: 10px 5px;
 				width: auto;
 				text-align: justify;
 			}
@@ -44,6 +56,7 @@
 				font-size: 21px;
 				color: #3a3a3a;
 				margin-top: 5px; margin-bottom: 10px;
+				padding-left: 10px;
 			}
 
 			.registration-mail-body .body-form .form-group {
@@ -61,11 +74,13 @@
 				margin-top: 20px; margin-bottom: 30px;
 				text-align: center;
 				border: 1px solid #d1d1d1;
+				background-color: #f1f1f1;
 			}
 
 			.registration-mail-body .body-form .form-group .user-info-form table {
 				font-size: 15px;
 				margin-bottom: 0px;
+				background-color: white;
 			}
 
 			.registration-mail-body .footer-form {
@@ -73,16 +88,17 @@
 				padding: 10px 30px;
 				text-align: center;
 				color: white;
-				font-size: 13px;
+				font-size: 11px;
 			}
 
 			.registration-mail-body .footer-form .sub-form {
-				margin-top: 10px; margin-bottom: 20px;
+				margin-top: 10px; margin-bottom: 18px;
 				text-align: center;
-				line-height: 16px;
 			}
 
-
+			.registration-mail-body .footer-form .sub-form p {
+				margin-bottom: 5px;
+			}
 
 			.registration-mail-body .footer-form .connecting-us-form {
 				text-align: center;
@@ -127,7 +143,7 @@
 				<p class="title">Xin chào <%= @user.fullname %></p>
 				<div class="form-group">
 					<p>Cảm ơn bạn đã đăng ký tài khoản thành viên trên trang web Die4TopLibrary của chúng tôi.</p>
-					<p>Thông tin tài khoản bạn</p>
+					<p>Thông tin tài khoản của bạn:</p>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 user-info-form">
 							<table class="table table-bordered table-hover">
@@ -143,12 +159,16 @@
 							  	<td>Biệt danh</td>
 							  	<td><%= @user.nickname %></td>
 							  </tr>
+							  <tr>
+							  	<td>Trạng thái</td>
+							  	<td>Bình thường</td>
+							  </tr>
 							</table>
 						</div>
 					</div>
 					<p>Ngay từ bây giờ, bạn đã có thể truy cập bằng tài khoản của mình vào trang web của chúng tôi để sử dụng những dịch vụ mới nhất.</p>
 					<p style="font-size: 15px;"><em>Nếu bạn có bất kỳ câu hỏi nào về tài khoản của mình hoặc bất kỳ vấn đề nào khác, xin vui lòng liên lạc với chúng tôi tại support@die4top.com hoặc gọi điện thoại vào số (04)3123.4567.</em></p>
-					<p style="font-size: 19px;">Một lần nữa xin cảm ơn bạn.</p>
+					<p style="font-size: 19px;">Cảm ơn bạn đã trở thành một thành viên của Die4Top Library.</p>
 				</div>
 			</div>
 			<div class="footer-form">
@@ -161,15 +181,6 @@
 					<div class="sub-form">	
 						<p>Die4Top Library, số 10 Nguyễn Huy A, phường Phương B, quận Thanh C, Hà Nội.</p>
 					</div>
-
-					<div class="form-group connecting-us-form">
-						<p class="title">Kết nối với chúng tôi</p>
-						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span></button>
-						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
-						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></button>
-						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
-					</div>
-
 			</div>
 		</div>
 	</body>

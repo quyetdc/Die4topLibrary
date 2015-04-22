@@ -20,7 +20,7 @@ body {
 .footer-support-body .support-list .title {
 	width: 100%;
 	padding-top: 13px; padding-bottom: 12px;
-	border-radius: 5px;
+	border-radius: 3px;
 	background-color: #478bcd;
 	color: white;
 	font-size: 15px;
@@ -32,13 +32,8 @@ body {
 }
 
 .footer-support-body .support-list ul li {
-	padding: 12px 15px;
-	border-radius: 10px;
-}
-
-.footer-support-body .support-list ul li:hover {
-	background-color: #68c5bc;
-	transition: background-color 0.6s ease;
+	padding: 8px 15px;
+	border-radius: 3px;
 }
 
 .footer-support-body .support-list ul li a {
@@ -63,7 +58,7 @@ body {
 	padding: 6px 12px;
 	font-size: 13px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 3px;
 	color: white;
 	background-color: #68c5bc;
 }
@@ -92,7 +87,7 @@ body {
 	padding: 8px 12px;
 	font-size: 13px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 3px;
 	color: white;
 	background-color: #d36b9e;
 }
