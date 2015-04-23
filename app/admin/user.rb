@@ -12,9 +12,11 @@ ActiveAdmin.register User do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-
+    
 	permit_params :email, :password, :password_confirmation, :fullname, :nickname, :avatar, :status, :role
- 
+    
+    menu if: proc{ can? :update, User }
+
     index do
         column :email
         column :fullname
@@ -29,7 +31,7 @@ ActiveAdmin.register User do
  
     filter :email
  
-    form do |f|
+    form do |f| 
         f.inputs "User Details" do
         	f.input :fullname
             f.input :nickname

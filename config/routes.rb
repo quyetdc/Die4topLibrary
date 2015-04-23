@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :books
+
+  resources :authors
+
+  resources :categories
+
   devise_for :users, :sign_out_via => [ :get, :delete ]
   ActiveAdmin.routes(self)
 

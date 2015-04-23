@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
     def authenticate_active_admin_user!
         authenticate_user!
-        unless current_user.role?(:administrator)
+        if current_user.role? :borrower
             flash[:alert] = "You are not authorized to access this resource!"
             redirect_to root_path
         end

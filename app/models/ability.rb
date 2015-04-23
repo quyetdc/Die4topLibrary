@@ -7,6 +7,8 @@ class Ability
     user ||= User.new # guest user (not logged in)
     if user.role? :administrator
         can :manage, :all
+    elsif user.role? :librarian
+        can :manage, [Book, Category, Author, BooksAuthorsJoin, BooksCategoriesJoin]
     else
         can :read, :all
     end

@@ -25,7 +25,7 @@
 		<div class="form-group user-form">
 			<ul>
 				<% if user_signed_in? %>
-					<% if current_user.role?(:administrator) %>
+					<% unless current_user.role?(:borrower) %>
 						<li id="admin-li"><%= link_to "A", admin_root_path, id: "admin-link" %></span></li>
 					<% end %>
 				<% end %>

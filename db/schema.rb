@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421050159) do
+ActiveRecord::Schema.define(version: 20150422153040) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -27,6 +27,46 @@ ActiveRecord::Schema.define(version: 20150421050159) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "avatar"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "sub_title"
+    t.string   "image"
+    t.string   "origin_title"
+    t.string   "language"
+    t.integer  "pulished_year"
+    t.integer  "pages"
+    t.float    "cover_price"
+    t.string   "isbn"
+    t.text     "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "books_authors_joins", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "author_id"
+  end
+
+  create_table "books_categories_joins", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                               null: false
