@@ -19,8 +19,8 @@ menu if: proc{ can? :update, BooksAuthorsJoin }
 
 index do
 	column :id
-    column :book_id
-    column :author_id
+    column "Book_id", :book_id
+    column "Author_id", :author_id
     actions
 end
 
