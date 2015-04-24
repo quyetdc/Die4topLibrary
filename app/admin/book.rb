@@ -19,7 +19,7 @@ ActiveAdmin.register Book do
  
   menu if: proc{ can? :update, Book }
 
-    scope :all, :default => true
+  scope :all, :default => true
 	scope :due_this_week do |tasks|
 	  tasks.where('created_at > ?', 1.week.from_now)
 	end
@@ -34,10 +34,12 @@ ActiveAdmin.register Book do
     end
     column :sub_title
     column :origin_title
+    column "Image" do |i|
+      link_to image_tag(i.image_url(:activeadmin_book_image_thumb)), admin_book_path(i)
+    end
     column :language
     column :pulished_year
     column :pages
-    column :image
     column :cover_price do |book|
       number_to_currency book.cover_price
     end
@@ -49,11 +51,12 @@ ActiveAdmin.register Book do
   # filter :authors, :as => :check_boxes
   # filter :categories, :as => :check_boxes
 
-  	form do |f|
+  	form(:html => { :multipart => true }) do |f|
         f.inputs "Book Details" do
         	f.input :title
             f.input :sub_title
             f.input :origin_title
+            f.input :image, :as => :file, :hint => image_tag(f.object.image_url(:activeadmin_book_image_thumb))
             f.input :language
             f.input :pulished_year
             f.input :pages
@@ -84,7 +87,7 @@ ActiveAdmin.register Book do
 		          t.column("Ngôn ngữ") { |task| book.language }
 		          t.column("Năm") { |task| book.pulished_year }
 		          t.column("Tổng số trang") { |task| book.pages }
-		          t.column("Ảnh đại diện") { |task| book.image }
+		          t.column("Ảnh đại diện") { |task| image_tag(task.image_url(:activeadmin_book_image_thumb)) }
 		          t.column("Giá") { |task| book.cover_price }
 		          t.column("isbn") { |task| book.isbn }
 		          t.column("Mô tả") { |task| book.description }

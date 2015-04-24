@@ -21,6 +21,10 @@ ActiveAdmin.register User do
         column :email
         column :fullname
         column :nickname
+        column "Avatar" do |i|
+          link_to image_tag(i.avatar_url(:activeadmin_user_avatar_thumb)), admin_user_path(i)
+
+        end
         column :current_sign_in_at
         column :last_sign_in_at
         column :sign_in_count
@@ -36,6 +40,7 @@ ActiveAdmin.register User do
         	f.input :fullname
             f.input :nickname
             f.input :email
+            f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar_url(:activeadmin_user_avatar_thumb))
             f.input :password
             f.input :password_confirmation
             f.input :role, as: :radio, collection: {Administrator: "administrator", Librarian: "librarian", Borrower: "borrower"}
@@ -48,6 +53,7 @@ ActiveAdmin.register User do
         attributes_table_for user do
           row("Id") { |user| link_to user.id, admin_user_path(user), style: "text-decoration: none" }
           # row("Trạng thái") { |user| status_tag (user.status = 1 ? "Bình thường" : "Khoá"), (user.status ? :ok : :error) }
+          row("Ảnh đại diện") { |user| link_to image_tag(user.avatar_url(:activeadmin_user_avatar_thumb)), admin_user_path(user) }
           row("Email") { |user| link_to user.email, admin_user_path(user), style: "text-decoration: none" }
           row("Họ và tên") { |user| user.fullname }
           row("Biệt danh") { |user| user.nickname }

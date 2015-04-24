@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   before_save :before_save_user_method
   after_create :after_create_user_method
 
+  mount_uploader :avatar, ImageUploader
+
   	def password_required?
       new_record? ? false : super
     end
