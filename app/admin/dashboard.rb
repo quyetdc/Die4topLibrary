@@ -34,7 +34,7 @@ ActiveAdmin.register_page "Dashboard" do
               # row("Trạng thái") { |user| status_tag (user.status = 1 ? "Bình thường" : "Khoá"), (user.status ? :ok : :error) }
               t.column("Tên tác giả") { |task| link_to task.name, admin_author_path(task), style: "text-decoration: none" }
               t.column("Ảnh đại diện") { |task| link_to image_tag(task.avatar_url(:activeadmin_author_avatar_thumb)), admin_author_path(task)}
-              t.column("Mô tả") { |task| task.description }
+              t.column("Mô tả") { |task| truncate task.description, length: 250 }
             end
           end
       end

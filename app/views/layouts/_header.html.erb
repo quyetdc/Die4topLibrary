@@ -25,6 +25,10 @@
             $('#myInput').focus()
           })
 
+          $(".navbar-brand").click(function(){
+              $("body").fadeTo(200, 0);
+          });
+
       });
     </script>
   </head>
@@ -166,7 +170,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Die4Top</a>
+          <%= link_to "Die4Top", root_path, class: "navbar-brand" %>
           <span class="glyphicon glyphicon-search navbar-toggle" id="g-search" aria-hidden="true" style="font-size: 16px; color: #666666; float: left; border: 0px; margin-left: 15px;" data-toggle="modal" data-target=".hide-search-form"></span>
         </div>
 

@@ -1,5 +1,15 @@
 <html>
 	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+	      $(document).ready(function() {
+	      		$("body").fadeTo(1);
+	          	$(".book-row img").click(function(){
+			        $("body").fadeTo(200, 0);
+			    });
+
+	      });
+	    </script>
 	</head>
 
 	<body>
@@ -10,11 +20,11 @@
 						<p class="book-group-title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>Sách mới trong tuần</p>
 
 						<div class="row book-row">
-							<% for i in 0..7 %>
+							<% @books.each do |book| %>
 								<div class="col-xs-6 col-sm-4 col-md-3">
 									<div class="sub-book">
-										<img src="Inferno-cover.jpg" alt="...">
-										<p class="title">Inferno</p>
+										<%= link_to image_tag(book.image), book %>
+										<p class="title"><%= truncate book.title, length: 24 %></p>
 										<div class="form-group rating-form">
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -33,11 +43,11 @@
 						<p class="book-group-title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>Sách mới cập nhật</p>
 
 						<div class="row book-row">
-							<% for i in 0..7 %>
+							<% @books.each do |book| %>
 								<div class="col-xs-6 col-sm-4 col-md-3">
 									<div class="sub-book">
-										<img src="davincicode.jpg" alt="...">
-										<p class="title">The DaVinci Code</p>
+										<%= link_to image_tag(book.image), book %>
+										<p class="title"><%= truncate book.title, length: 24 %></p>
 										<div class="form-group rating-form">
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>

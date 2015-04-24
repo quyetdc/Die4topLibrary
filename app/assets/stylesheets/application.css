@@ -11,9 +11,10 @@
  * file per style scope.
  *
 
- *= require_self
- *= require_tree .
  *= require bootstrap_and_overrides
+ *= require_tree .
+ *= require_self
+
  */
 
  @font-face { 
@@ -27,7 +28,6 @@
     .body-right {
         display: none;
     }
-
     .body-left {
     	width: 100% !important;
     }

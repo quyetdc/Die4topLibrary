@@ -40,7 +40,7 @@
 					<% Author.all.each do |i| %>
 						<div class="col-xs-6 col-sm-4 col-md-6">
 							<div class="sub-author-form">
-								<%= image_tag (i.avatar_url(:activeadmin_author_avatar_thumb)) %>
+								<%= link_to image_tag(i.avatar_url(:activeadmin_author_avatar_thumb)), author_path(i) %>
 								<button type="button" class="btn btn-info">Theo dõi</button>
 							</div>
 						</div>
