@@ -14,13 +14,12 @@ ActiveAdmin.register Book do
 # end
 
   permit_params :title, :sub_title, :image, :origin_title,
-  :language, :pulished_year, :pages, :cover_price, :isbn, :description,
-  books_authors_join_attributes: [:id, :book_id, :author_id, :_destroy],
-  books_categories_join_attributes: [:id, :book_id, :category_id, :_destroy]
+  :language, :pulished_year, :pages, :cover_price, :isbn, :description, :authors,
+  books_categories_joins: [:id, :book_id, :category_id], books_authors_joins: [:id, :book_id, :author_id]
  
   menu if: proc{ can? :update, Book }
 
-  scope :all, :default => true
+    scope :all, :default => true
 	scope :due_this_week do |tasks|
 	  tasks.where('created_at > ?', 1.week.from_now)
 	end
@@ -55,10 +54,6 @@ ActiveAdmin.register Book do
         	f.input :title
             f.input :sub_title
             f.input :origin_title
-            
-            f.input :authors, :as => :check_boxes
-            f.input :categories, :as => :check_boxes
-
             f.input :language
             f.input :pulished_year
             f.input :pages
@@ -66,6 +61,14 @@ ActiveAdmin.register Book do
             f.input :isbn
             f.input :description
         end
+        f.inputs "Categories List" do
+           f.input :categories, :label => "Categories List", :hint => "Các danh mục thuộc cuốn sách này", :collection => Category.all, as: :check_boxes   
+        end
+
+        f.inputs "Authors List" do
+          f.input :authors, :label => "Authors List", :hint => "Các tác giả của cuốn sách này", :collection => Author.all, as: :check_boxes      
+        end
+
         f.actions
     end
 
