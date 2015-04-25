@@ -18,6 +18,7 @@ ActiveAdmin.register User do
     menu if: proc{ can? :update, User }
 
     index do
+      selectable_column
         column :email
         column :fullname
         column :nickname
@@ -30,7 +31,7 @@ ActiveAdmin.register User do
         column :sign_in_count
         column :status
         column :role
-        actions
+      actions
     end
  
     filter :email

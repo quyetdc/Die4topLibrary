@@ -29,25 +29,26 @@ ActiveAdmin.register Book do
 	end
 
   index do
-  	column :id
-    column :title do |b|
-    	link_to b.title, admin_book_path(b), style: "text-decoration: none"
-    end
-    # column :sub_title
-    # column :origin_title
-    column "Image" do |i|
-      link_to image_tag(i.image_url(:activeadmin_book_image_thumb)), admin_book_path(i)
-    end
-    column :language
-    column :pulished_year
-    # column :pages
-    column :cover_price do |book|
-      number_to_currency book.cover_price
-    end
-    # column :isbn
-    column :description do |b|
-      truncate(b.description, :length => 300)
-    end
+    selectable_column
+    	column :id
+      column :title do |b|
+      	link_to b.title, admin_book_path(b), style: "text-decoration: none"
+      end
+      # column :sub_title
+      # column :origin_title
+      column "Image" do |i|
+        link_to image_tag(i.image_url(:activeadmin_book_image_thumb)), admin_book_path(i)
+      end
+      column :language
+      column :pulished_year
+      # column :pages
+      column :cover_price do |book|
+        number_to_currency book.cover_price
+      end
+      # column :isbn
+      column :description do |b|
+        truncate(b.description, :length => 300)
+      end
     actions
   end
 

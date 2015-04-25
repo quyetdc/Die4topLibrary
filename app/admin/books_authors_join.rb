@@ -18,9 +18,10 @@ permit_params :book_id, :author_id
 menu if: proc{ can? :update, BooksAuthorsJoin }
 
 index do
-	column :id
-    column "Book_id", :book_id
-    column "Author_id", :author_id
+	selectable_column
+		column :id
+	    column "Book_id", :book_id
+	    column "Author_id", :author_id
     actions
 end
 

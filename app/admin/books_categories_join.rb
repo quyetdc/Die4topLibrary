@@ -18,9 +18,10 @@ permit_params :book_id, :category_id
 menu if: proc{ can? :update, BooksCategoriesJoin }
 
 index do
-	column :id
-    column "Book_id", :book_id
-    column "Category_id", :category_id
+	selectable_column
+		column :id
+	    column "Book_id", :book_id
+	    column "Category_id", :category_id
     actions
 end
 
