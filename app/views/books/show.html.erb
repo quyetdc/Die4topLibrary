@@ -3,64 +3,101 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-          
+          $("body").fadeTo(0000, 0);
+          $("body").fadeTo(300, 1);
         });
     </script>
   </head>
-  <body>
-    <p id="notice"><%= notice %></p>
-
-    <p>
-      <strong>Title:</strong>
-      <%= @book.title %>
-    </p>
-
-    <p>
-      <strong>Sub title:</strong>
-      <%= @book.sub_title %>
-    </p>
-
-    <p>
-      <strong>Image:</strong>
-      <%= @book.image %>
-    </p>
-
-    <p>
-      <strong>Origin title:</strong>
-      <%= @book.origin_title %>
-    </p>
-
-    <p>
-      <strong>Language:</strong>
-      <%= @book.language %>
-    </p>
-
-    <p>
-      <strong>Pulished year:</strong>
-      <%= @book.pulished_year %>
-    </p>
-
-    <p>
-      <strong>Pages:</strong>
-      <%= @book.pages %>
-    </p>
-
-    <p>
-      <strong>Cover price:</strong>
-      <%= @book.cover_price %>
-    </p>
-
-    <p>
-      <strong>Isbn:</strong>
-      <%= @book.isbn %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @book.description %>
-    </p>
-
-    <%= link_to 'Edit', edit_book_path(@book) %> |
-    <%= link_to 'Back', books_path %>
-  </body>
+  
+    <body>
+      <div class="model-book-show-body">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="container-fluid book-review-form">
+                  <div class="col-md-3 book-image-form">
+                    <%= image_tag(@book.image) %>
+                  </div>
+                  <div class="col-md-9 book-info-form">
+                    <div class="col-md-12 title">
+                      <%= @book.title %>
+                    </div>
+                    <div class="col-md-12 info">
+                      <div class="row">
+                        <div class="col-md-8 info-left">
+                          <table class="table table-bordered">
+                            <tr>
+                              <td>Tiêu đề phụ</td>
+                              <td><%= @book.sub_title %></td>
+                            </td>
+                            <tr>
+                              <td>Tiêu đề gốc</td>
+                              <td><%= @book.origin_title %></td>
+                            </td>
+                            <tr>
+                              <td>Ngôn ngữ</td>
+                              <td><%= @book.language %></td>
+                            </td>
+                            <tr>
+                              <td>Năm xuất bản</td>
+                              <td><%= @book.pulished_year %></td>
+                            </td>
+                            <tr>
+                              <td>Tổng số trang</td>
+                              <td><%= @book.pages %></td>
+                            </td>
+                            <tr>
+                              <td>Giá</td>
+                              <td><%= @book.cover_price %></td>
+                            </td>
+                          </table>
+                        </div>
+                        <div class="col-md-4 info-right">
+                          <div class="form-group add-to-cart-form">
+                            <label class="control-label" for="inputGroupSuccess3">Nhập số lượng sách</label>
+                            <div class="input-group">
+                              <span class="input-group-addon">Số quyển</span>
+                              <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
+                            </div>
+                            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart" style="color: white" aria-hidden="true"></span>Cho vào giỏ hàng</button>
+                          </div>
+                          <p style="font-size: 14px"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Chia sẻ cuốn sách này</p>
+                          <button type="button" class="btn btn-info" style="background-color: #4766ae;">Facebook</button>
+                          <button type="button" class="btn btn-success" style="background-color: #62a6e4;">Twitter</button>
+                          <button type="button" class="btn btn-warning" style="background-color: #0aad69;">Evernote</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="container-fluid book-description-form">
+                  <div class="col-md-3 form-left">
+                    <div class="row sub-author">
+                        <div class="col-md-8 col-md-offset-2">
+                          <%= image_tag((Author.fifth.avatar), :class => "img-circle") %>
+                        </div>
+                        <div class="col-md-12">
+                          <p class="title"><%= Author.fifth.name %></p>
+                          <p class="description"><%= truncate Author.fifth.description, length: 200 %></p>
+                          <button type="button" class="btn btn-primary">Xem thêm</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 form-right">
+                    <p class="title"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Mô tả cuốn sách</p>
+                    <p class="description"><%= @book.description %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <%= render "layouts/categorysidebar" %>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>
