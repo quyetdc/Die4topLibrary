@@ -15,7 +15,8 @@ ActiveAdmin.register Book do
 
   permit_params :title, :sub_title, :image, :origin_title,
   :language, :pulished_year, :pages, :cover_price, :isbn, :description, :authors,
-  books_categories_joins: [:id, :book_id, :category_id], books_authors_joins: [:id, :book_id, :author_id]
+  categories_attributes: [:id, :name, :description, :_destroy], authors_attributes: [:id, :name, :avatar, :description, :_destroy],
+  category_ids: [], author_ids: []
  
   menu if: proc{ can? :update, Book }
 
@@ -67,7 +68,10 @@ ActiveAdmin.register Book do
             f.input :description
         end
         f.inputs "Categories List" do
-           f.input :categories, :label => "Categories List", :hint => "Các danh mục thuộc cuốn sách này", :collection => Category.all, as: :check_boxes   
+          f.input :categories, :label => "Categories List", :hint => "Các danh mục của cuốn sách này", :collection => Category.all, as: :check_boxes      
+            # f.has_many :categories do |s|
+            #   s.input :name
+            # end
         end
 
         f.inputs "Authors List" do

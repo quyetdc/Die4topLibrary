@@ -82,16 +82,19 @@
               <div class="col-md-12">
                 <div class="container-fluid book-description-form">
                   <div class="col-md-3 form-left">
-                    <div class="row sub-author">
-                        <div class="col-md-8 col-md-offset-2">
-                          <%= image_tag((Author.last.avatar), :class => "img-circle") %>
-                        </div>
-                        <div class="col-md-12">
-                          <p class="title"><%= Author.last.name %></p>
-                          <p class="description"><em><%= truncate Author.last.description, length: 200 %></em></p>
-                          <button type="button" class="btn btn-primary"><%= link_to "Xem thêm", author_path(Author.last), :style => "text-decoration: none; color: white;" %></button>
-                        </div>
-                    </div>
+                    <p class="title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Các tác giả</p>
+                    <% @book.authors.each do |author| %>
+                      <div class="row sub-author">
+                          <div class="col-md-8 col-md-offset-2">
+                            <%= image_tag((author.avatar), :class => "img-circle") %>
+                          </div>
+                          <div class="col-md-12">
+                            <p class="title"><%= author.name %></p>
+                            <p class="description"><em><%= truncate author.description, length: 200 %></em></p>
+                            <button type="button" class="btn btn-primary"><%= link_to "Xem thêm", author_path(author), :style => "text-decoration: none; color: white;" %></button>
+                          </div>
+                      </div>
+                    <% end %>
                   </div>
                   <div class="col-md-9 form-right">
                     <p class="title"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Mô tả cuốn sách</p>

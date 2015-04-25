@@ -25,9 +25,9 @@
             $('#myInput').focus()
           })
 
-          $(".navbar-brand").click(function(){
-              $("body").fadeTo(200, 0);
-          });
+          // $(".navbar-brand").click(function(){
+          //     $("body").fadeTo(200, 0);
+          // });
 
       });
     </script>
@@ -177,16 +177,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">Văn hoá - Nghệ thuật</a></li>
-            <li><a href="#">Truyện tranh</a></li>
-            <li><a href="#">Thường thức - Đời sống</a></li>
-            <li><a href="#">Du lịch</a></li>
-            <li><a href="#">Kỹ năng sống</a></li>
-            <li><a href="#">Học tập</a></li>
-            <li><a href="#">Kinh tế</a></li>
-            <li><a href="#">Khoa học</a></li>
-            <li><a href="#">Văn học</a></li>
-            <li><a href="#">Tiểu thuyết</a></li>
+            <% Category.all.each do |category| %>
+            <li><%= link_to category.name, category %></li>
+            <% end %>
             <li><a href="#" data-toggle="modal" data-target=".hide-search-form"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
           </ul>
 
