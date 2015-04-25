@@ -3,8 +3,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-          $("body").fadeTo(0000, 0);
-          $("body").fadeTo(300, 1);
+          // $("body").fadeTo(0000, 0);
+          // $("body").fadeTo(300, 1);
         });
     </script>
   </head>
@@ -14,6 +14,12 @@
         <div class="row">
           <div class="col-md-9">
             <div class="row">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><%= link_to "Trang chủ", root_path %></li>
+                  <li><%= link_to @book.title, @book %></li>
+                </ol>
+              </div>
               <div class="col-md-12">
                 <div class="container-fluid book-review-form">
                   <div class="col-md-3 book-image-form">
@@ -57,8 +63,9 @@
                           <div class="form-group add-to-cart-form">
                             <label class="control-label" for="inputGroupSuccess3">Nhập số lượng sách</label>
                             <div class="input-group">
-                              <span class="input-group-addon">Số quyển</span>
+                              <span class="input-group-addon">Số lượng</span>
                               <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
+                              <span class="input-group-addon check-book-number-addon"></span>
                             </div>
                             <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart" style="color: white" aria-hidden="true"></span>Cho vào giỏ hàng</button>
                           </div>
@@ -77,12 +84,12 @@
                   <div class="col-md-3 form-left">
                     <div class="row sub-author">
                         <div class="col-md-8 col-md-offset-2">
-                          <%= image_tag((Author.fifth.avatar), :class => "img-circle") %>
+                          <%= image_tag((Author.last.avatar), :class => "img-circle") %>
                         </div>
                         <div class="col-md-12">
-                          <p class="title"><%= Author.fifth.name %></p>
-                          <p class="description"><%= truncate Author.fifth.description, length: 200 %></p>
-                          <button type="button" class="btn btn-primary">Xem thêm</button>
+                          <p class="title"><%= Author.last.name %></p>
+                          <p class="description"><em><%= truncate Author.last.description, length: 200 %></em></p>
+                          <button type="button" class="btn btn-primary"><%= link_to "Xem thêm", author_path(Author.last), :style => "text-decoration: none; color: white;" %></button>
                         </div>
                     </div>
                   </div>

@@ -53,7 +53,8 @@ body {
 }
 
 .footer-introduce-body .introduce-body-center .title {
-	margin-top: 0px; margin-bottom: 18px;
+	margin: auto;
+	margin-bottom: 10px;
 	width: 150px;
 	padding: 6px 12px;
 	font-size: 13px;
@@ -70,11 +71,9 @@ body {
 .footer-introduce-body .introduce-body-center .copy-right-group {
 	text-align: center;
 	padding: 10px; padding-bottom: 0px;
-	border: 1px solid #d4d4d4;
 }
 
 .footer-introduce-body .introduce-body-center .copy-right-group p {
-	line-height: 15px;
 }
 
 .footer-introduce-body .introduce-body-right {
@@ -82,9 +81,9 @@ body {
 }
 
 .footer-introduce-body .introduce-body-right .title {
-	margin-top: 0px; margin-bottom: 18px;
+	margin-top: 0px; margin-bottom: 12px;
 	width: 100%;
-	padding: 8px 12px;
+	padding: 5px 12px;
 	font-size: 13px;
 	text-align: center;
 	border-radius: 3px;
@@ -98,7 +97,7 @@ body {
 }
 
 .footer-introduce-body .introduce-body-right .form-group button {
-	padding: 12px 18px;
+	padding: 10px 15px;
 	margin: 0px 2px 7px 2px;
 	color: white;
 	font-size: 18px;

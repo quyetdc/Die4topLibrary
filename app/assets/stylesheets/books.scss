@@ -9,9 +9,26 @@
 	font-size: 14px;
 }
 
+.model-book-show-body .breadcrumb {
+	width: 100%;
+	padding-top: 11px; padding-bottom: 11px;
+	background-color: white;
+	box-shadow: 1px 1px 1px 1px #d3d3d3;
+	border-radius: 0px;
+	margin-bottom: 15px;
+	background-color: #4583ca;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.model-book-show-body .breadcrumb li a {
+	text-decoration: none;
+	color: white;
+}
+
 .model-book-show-body .book-review-form {
 	width: 100%;
-	padding: 5px;
+	padding: 10px 5px;
 	background-color: white;
 	margin-bottom: 14px;
 	box-shadow: 1px 1px 1px 1px #d3d3d3;
@@ -22,7 +39,7 @@
 }
 
 .model-book-show-body .book-review-form .book-image-form {
-	padding: 10px;
+	padding: 10px; padding-right: 15px;
 	border-right: 1px solid #d3d3d3;
 }
 
@@ -35,7 +52,7 @@
 }
 
 .model-book-show-body .book-review-form .book-info-form .title {
-	padding: 5px;
+	padding-top: 0px; padding-bottom: 10px;
 	font-size: 28px;
 	border-bottom: 1px solid #d3d3d3;
 	text-align: center;
@@ -96,11 +113,11 @@
 }
 
 .model-book-show-body .book-description-form .sub-author .title {
-	width: 100%;
 	text-align: center;
 	color: white;
 	background-color: #4cd8cb;
 	padding-top: 10px; padding-bottom: 10px;
+	margin-left: -15px; margin-right: -15px;
 }
 
 .model-book-show-body .book-description-form .sub-author .description {
@@ -119,6 +136,7 @@
 	background-color: white;
 	box-shadow: 1px 1px 1px 1px #d3d3d3;
 	text-align: justify;
+	margin-bottom: 15px;
 }
 
 .model-book-show-body .book-description-form .form-right .title {
@@ -126,4 +144,8 @@
 	padding: 10px 0px;
 	border-bottom: 3px solid #d8454b;
 	font-size: 18px;
+}
+
+.model-book-show-body .book-description-form .form-right .description {
+	line-height: 25px;
 }
