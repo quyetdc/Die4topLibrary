@@ -51,8 +51,9 @@ body {
     padding-left: 15px; padding-right: 15px;
 }
 
-.header-navbar .navbar-collapse .navbar-right {
-
+.header-navbar .navbar-collapse .navbar-right img {
+    margin: -10px;
+    width: 25px;    
 }
 
 .header-background {

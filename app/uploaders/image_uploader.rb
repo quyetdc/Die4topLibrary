@@ -45,6 +45,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [120, 150]
   end
 
+  def default_url
+    "default_normal_user_avatar/" + [:activeadmin_user_avatar_thumb, "default_normal_user_avatar.png"].compact.join('_')
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

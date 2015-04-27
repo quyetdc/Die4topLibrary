@@ -35,13 +35,14 @@ ActiveAdmin.register User do
     end
  
     filter :email
- 
+    
     form do |f| 
         f.inputs "User Details" do
         	f.input :fullname
             f.input :nickname
             f.input :email
-            f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar_url(:activeadmin_user_avatar_thumb))
+            f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar.default_url)
+            # f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar_url(:activeadmin_user_avatar_thumb))
             f.input :password
             f.input :password_confirmation
             f.input :role, as: :radio, collection: {Administrator: "administrator", Librarian: "librarian", Borrower: "borrower"}
