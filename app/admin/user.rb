@@ -24,11 +24,10 @@ ActiveAdmin.register User do
         column :nickname
         column "Avatar" do |i|
           link_to image_tag(i.avatar_url(:activeadmin_user_avatar_thumb)), admin_user_path(i)
-
         end
         column :current_sign_in_at
-        column :last_sign_in_at
-        column :sign_in_count
+        # column :last_sign_in_at
+        # column :sign_in_count
         column :status
         column :role
       actions
@@ -41,8 +40,8 @@ ActiveAdmin.register User do
         	f.input :fullname
             f.input :nickname
             f.input :email
-            f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar.default_url)
-            # f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar_url(:activeadmin_user_avatar_thumb))
+            # f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar.default_url)
+            f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar_url(:activeadmin_user_avatar_thumb))
             f.input :password
             f.input :password_confirmation
             f.input :role, as: :radio, collection: {Administrator: "administrator", Librarian: "librarian", Borrower: "borrower"}

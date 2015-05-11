@@ -109,6 +109,7 @@ ActiveAdmin.register Book do
 		      		table_for book.authors do |t|
 		      			t.column("Id") { |task| task.id }
 		      			t.column("Tên tác giả") { |task| task.name }
+                t.column("Ảnh đại diện") { |task| link_to image_tag(task.avatar_url), task }
 		      			t.column("Mô tả") { |task| task.description }
 		      		end
 					# row :author do |book|
