@@ -6,12 +6,5 @@ class AddNewColumnsToUsers < ActiveRecord::Migration
     add_column :users, :status, :integer, :default => 1
     add_column :users, :role, :string, :default => "borrower"
 
-    User.create! do |u|
-        u.email = 'administrator@example.com'
-        u.password = '123456789'
-        u.avatar = 'default_admin_user_avatar.png'
-        u.role = 'administrator'
-    end
-
   end
 end
