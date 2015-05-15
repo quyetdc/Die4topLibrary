@@ -34,38 +34,14 @@
 		</div>
 
 		<div class="panel panel-success author-group">
-			<div class="panel-heading">Nhà văn hôm nay</div>
+			<div class="panel-heading">Tác giả trong ngày</div>
 			<div class="panel-body">
 				<div class="row">
-					<% for i in 1..2 do %>
+					<% Author.all.each do |i| %>
 						<div class="col-xs-6 col-sm-4 col-md-6">
 							<div class="sub-author-form">
-								<img src="author3.png" alt="...">
-								<button type="button" class="btn btn-info">Theo dõi</button>
-							</div>
-						</div>
-					<% end %>
-					<% for i in 1..2 do %>
-						<div class="col-xs-6 col-sm-4 col-md-6">
-							<div class="sub-author-form">
-								<img src="author2.png" alt="...">
-								<button type="button" class="btn btn-info">Theo dõi</button>
-							</div>
-						</div>
-					<% end %>
-					<% for i in 1..2 do %>
-						<div class="col-xs-6 col-sm-4 col-md-6">
-							<div class="sub-author-form">
-								<img src="author1.png" alt="...">
-								<button type="button" class="btn btn-info">Theo dõi</button>
-							</div>
-						</div>
-					<% end %>
-					<% for i in 1..2 do %>
-						<div class="col-xs-6 col-sm-4 col-md-6">
-							<div class="sub-author-form">
-								<img src="author4.png" alt="...">
-								<button type="button" class="btn btn-info">Theo dõi</button>
+								<%= link_to image_tag(i.avatar_url(:activeadmin_author_avatar_thumb)), author_path(i) %>
+								<button type="button" class="btn btn-info"><%= link_to "Xem thêm", author_path(i), :style => "text-decoration: none; color: white;" %></button>
 							</div>
 						</div>
 					<% end %>

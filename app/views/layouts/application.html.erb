@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Die4topLibrary</title>
+  <title>Die4top Library | Your books, your knowledge </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  <style type="text/css">
-	  @media only screen and (max-width: 767px) {
-	    .body-right {
-	        display: none;
-	    }
-
-	    .body-left {
-	    	width: 100% !important;
-	    }
-	}
-
-  	.body-left {
-  		width: 96%;
-  		float: left;
-  	}
-
-  	.body-right {
-  		width: 4%;
-  		float: right;
-  	}
-  </style>
 </head>
 <body>
 	<div class="body-left">
 		<%= render "layouts/header" %>
+		<p><%= notice %></p>
+		<p><%= alert %></p>
 		<%= yield %>
 		<%= render "layouts/footer" %>
 	</div>

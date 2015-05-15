@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  resources :books
 
+  resources :authors
+
+  resources :categories
+
+  devise_for :users, :sign_out_via => [ :get, :delete ]
+  ActiveAdmin.routes(self)
+
+  get 'home/index'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

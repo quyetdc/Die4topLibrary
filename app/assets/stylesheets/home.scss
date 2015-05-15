@@ -2,9 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media only screen and (max-width: 759px) {
+  .books-group .sub-book img { height: 400px !important; }
+  .books-group .sub-book .title { font-size: 15px !important; }
+}
+
+@media only screen and (max-width: 499px) {
+  .books-group .sub-book img { height: 200px !important; }
+  .books-group .sub-book .title { font-size: 14px !important; }
+}
+
 body {
 	font-family: Helvetica;
-	font-size: 13px;
+	font-size: 19px;
+}
+
+.home-body {
+
 }
 
 .books-group {
@@ -30,10 +44,13 @@ body {
 	padding: 5px;
 	border: 1px solid #d4d4d4;
 	margin-bottom: 30px;
+	background-color: white;
 }
 
 .books-group .sub-book img {
 	width: 100%;
+	height: 310px;
+	min-height: 150px;
 }
 
 .books-group .sub-book .title {

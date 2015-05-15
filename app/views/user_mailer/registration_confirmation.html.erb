@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<style type="text/css">
+			@-webkit-keyframes spin {
+			    0%  {-webkit-transform: rotate(0deg);}
+			    100% {-webkit-transform: rotate(360deg);}   
+			}
+
+			body {
+				font-family: Helvetica;
+				font-size: 14px;
+				background-color: #f1f1f1;
+			}
+
+			.registration-mail-body {
+				background-color: white;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				padding: 10px;
+				border-top: 12px solid #4cb3d7;
+			}
+
+			.registration-mail-body .header-form {
+				padding-top: 15px; padding-bottom: 15px;
+				font-size: 17px;
+				text-align: center;
+				border-bottom: 1px solid #d1d1d1;
+				margin-bottom: 20px;
+			}
+
+			.registration-mail-body .header-form .title {
+				font-size: 28px;
+				color: #4a4a4a;
+				padding-left: 15px; padding-right: 15px;
+			}
+
+			.registration-mail-body .body-form {
+				padding: 10px 5px;
+				width: auto;
+				text-align: justify;
+			}
+
+			.registration-mail-body .body-form .title {
+				font-size: 21px;
+				color: #3a3a3a;
+				margin-top: 5px; margin-bottom: 10px;
+				padding-left: 10px;
+			}
+
+			.registration-mail-body .body-form .form-group {
+				margin-top: 5px; margin-bottom: 5px;
+				padding: 10px;
+				font-size: 17px;
+			}
+
+			.registration-mail-body .body-form .form-group p {
+				margin-bottom: 5px;
+			}
+
+			.registration-mail-body .body-form .form-group .user-info-form {
+				padding: 25px;
+				margin-top: 20px; margin-bottom: 30px;
+				text-align: center;
+				border: 1px solid #d1d1d1;
+				background-color: #f1f1f1;
+			}
+
+			.registration-mail-body .body-form .form-group .user-info-form table {
+				font-size: 15px;
+				margin-bottom: 0px;
+				background-color: white;
+			}
+
+			.registration-mail-body .footer-form {
+				background-color: #4cb3d7;
+				padding: 10px 30px;
+				text-align: center;
+				color: white;
+				font-size: 11px;
+			}
+
+			.registration-mail-body .footer-form .sub-form {
+				margin-top: 10px; margin-bottom: 18px;
+				text-align: center;
+			}
+
+			.registration-mail-body .footer-form .sub-form p {
+				margin-bottom: 5px;
+			}
+
+			.registration-mail-body .footer-form .connecting-us-form {
+				text-align: center;
+				color: white;
+			}
+
+			.registration-mail-body .footer-form .connecting-us-form .title {
+				padding-top: 15px;
+				border-top: 1px solid #d1d1d1;
+				font-size: 17px;
+			}
+
+
+			.registration-mail-body .footer-form .connecting-us-form button {
+				padding: 8px 13px;
+				margin: 0px 3px;
+				color: white;
+				font-size: 18px;
+				background-color: #424242;
+				border: 0px;
+			}
+
+			.registration-mail-body .footer-form .connecting-us-form button:hover {
+				background-color: #575757;
+
+				-webkit-animation-name: spin;
+			    -webkit-animation-duration: 1200ms;
+			    -webkit-animation-iteration-count: infinite;
+			    -webkit-animation-timing-function: 1;
+
+			/*    -webkit-animation: spin 4s infinite linear;*/
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container registration-mail-body">
+			<div class="header-form">
+				<h2 class="title">Chào mừng bạn đã đến với Die4Top Library</h2>
+			</div>
+			<div class="body-form">
+				<p class="title">Xin chào <%= @user.fullname %></p>
+				<div class="form-group">
+					<p>Cảm ơn bạn đã đăng ký tài khoản thành viên trên trang web Die4TopLibrary của chúng tôi.</p>
+					<p>Thông tin tài khoản của bạn:</p>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 user-info-form">
+							<table class="table table-bordered table-hover">
+							  <tr>
+							  	<td>Email</td>
+							  	<td><%= @user.email %></td>
+							  </tr>
+							  <tr>
+							  	<td>Họ và tên</td>
+							  	<td><%= @user.fullname %></td>
+							  </tr>
+							  <tr>
+							  	<td>Biệt danh</td>
+							  	<td><%= @user.nickname %></td>
+							  </tr>
+							  <tr>
+							  	<td>Trạng thái</td>
+							  	<td>Bình thường</td>
+							  </tr>
+							</table>
+						</div>
+					</div>
+					<p>Ngay từ bây giờ, bạn đã có thể truy cập bằng tài khoản của mình vào trang web của chúng tôi để sử dụng những dịch vụ mới nhất.</p>
+					<p style="font-size: 15px;"><em>Nếu bạn có bất kỳ câu hỏi nào về tài khoản của mình hoặc bất kỳ vấn đề nào khác, xin vui lòng liên lạc với chúng tôi tại support@die4top.com hoặc gọi điện thoại vào số (04)3123.4567.</em></p>
+					<p style="font-size: 19px;">Cảm ơn bạn đã trở thành một thành viên của Die4Top Library.</p>
+				</div>
+			</div>
+			<div class="footer-form">
+
+					<div class="sub-form">
+						<p>© Copyright 2015 library.die4top.com, All rights reserved</p>
+						<p>® Die4Top Library giữ bản quyền nội dung trên website này.</p>
+					</div>
+
+					<div class="sub-form">	
+						<p>Die4Top Library, số 10 Nguyễn Huy A, phường Phương B, quận Thanh C, Hà Nội.</p>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          // $("body").fadeTo(0000, 0);
+          // $("body").fadeTo(300, 1);
+        });
+    </script>
+  </head>
+  
+    <body>
+      <div class="model-book-show-body">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><%= link_to "Trang chủ", root_path %></li>
+                  <li><%= link_to @book.title, @book %></li>
+                </ol>
+              </div>
+              <div class="col-md-12">
+                <div class="container-fluid book-review-form">
+                  <div class="col-md-3 book-image-form">
+                    <%= image_tag(@book.image) %>
+                  </div>
+                  <div class="col-md-9 book-info-form">
+                    <div class="col-md-12 title">
+                      <%= @book.title %>
+                    </div>
+                    <div class="col-md-12 info">
+                      <div class="row">
+                        <div class="col-md-8 info-left">
+                          <table class="table table-bordered">
+                            <tr>
+                              <td>Tiêu đề phụ</td>
+                              <td><%= @book.sub_title %></td>
+                            </td>
+                            <tr>
+                              <td>Tiêu đề gốc</td>
+                              <td><%= @book.origin_title %></td>
+                            </td>
+                            <tr>
+                              <td>Ngôn ngữ</td>
+                              <td><%= @book.language %></td>
+                            </td>
+                            <tr>
+                              <td>Năm xuất bản</td>
+                              <td><%= @book.pulished_year %></td>
+                            </td>
+                            <tr>
+                              <td>Tổng số trang</td>
+                              <td><%= @book.pages %></td>
+                            </td>
+                            <tr>
+                              <td>Giá</td>
+                              <td><%= @book.cover_price %></td>
+                            </td>
+                          </table>
+                        </div>
+                        <div class="col-md-4 info-right">
+                          <div class="form-group add-to-cart-form">
+                            <label class="control-label" for="inputGroupSuccess3">Nhập số lượng sách</label>
+                            <div class="input-group">
+                              <span class="input-group-addon">Số lượng</span>
+                              <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
+                              <span class="input-group-addon check-book-number-addon"></span>
+                            </div>
+                            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart" style="color: white" aria-hidden="true"></span>Cho vào giỏ hàng</button>
+                          </div>
+                          <p style="font-size: 14px"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Chia sẻ cuốn sách này</p>
+                          <button type="button" class="btn btn-info" style="background-color: #4766ae;">Facebook</button>
+                          <button type="button" class="btn btn-success" style="background-color: #62a6e4;">Twitter</button>
+                          <button type="button" class="btn btn-warning" style="background-color: #0aad69;">Evernote</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="container-fluid book-description-form">
+                  <div class="col-md-3 form-left">
+                    <p class="title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Các tác giả</p>
+                    <% @book.authors.each do |author| %>
+                      <div class="row sub-author">
+                          <div class="col-md-8 col-md-offset-2">
+                            <%= image_tag((author.avatar), :class => "img-circle") %>
+                          </div>
+                          <div class="col-md-12">
+                            <p class="title"><%= author.name %></p>
+                            <p class="description"><em><%= truncate author.description, length: 200 %></em></p>
+                            <button type="button" class="btn btn-primary"><%= link_to "Xem thêm", author_path(author), :style => "text-decoration: none; color: white;" %></button>
+                          </div>
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="col-md-9 form-right">
+                    <p class="title"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Mô tả cuốn sách</p>
+                    <p class="description"><%= @book.description %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <%= render "layouts/categorysidebar" %>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
