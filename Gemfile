@@ -58,6 +58,7 @@ gem 'cancancan'
 
 gem 'carrierwave'
 gem "rmagick"
+gem 'cloudinary'
 
 # Annotate Application structure
 gem 'annotate', '~> 2.6.6'

@@ -23,7 +23,7 @@
               <div class="col-md-12">
                 <div class="container-fluid book-review-form">
                   <div class="col-md-3 book-image-form">
-                    <%= image_tag(@book.image) %>
+                    <%= image_tag(@book.image_url) %>
                   </div>
                   <div class="col-md-9 book-info-form">
                     <div class="col-md-12 title">
@@ -86,7 +86,7 @@
                     <% @book.authors.each do |author| %>
                       <div class="row sub-author">
                           <div class="col-md-8 col-md-offset-2">
-                            <%= image_tag((author.avatar), :class => "img-circle") %>
+                            <%= image_tag((author.avatar_url), :class => "img-circle") %>
                           </div>
                           <div class="col-md-12">
                             <p class="title"><%= author.name %></p>

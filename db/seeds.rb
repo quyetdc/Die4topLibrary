@@ -29,14 +29,15 @@
 #
 
 # create Admin - just one admin
-unless User.exist?(role: 'administrator')
+unless User.exists?(role: 'administrator')
  	User.create(
-		email: 'administrator@toplibrary.com'
+		email: 'administrator@toplibrary.com',
 		password: 'password',
 		password_confirmation: 'password',
 		fullname: 'Administrator',
 		nickname: 'Top Library',
-		role: 'administrator'
+		role: 'administrator',
+		avatar: 'http://res.cloudinary.com/quyetdc-github-io/image/upload/v1420855387/n3lyxar9jib5kitcacwr.png'
 	)
 end 
 

@@ -31,7 +31,7 @@
 							<% @books.each do |book| %>
 								<div class="col-xs-6 col-sm-4 col-md-3">
 									<div class="sub-book">
-										<%= link_to image_tag(book.image), book %>
+										<%= link_to image_tag(book.image_url), book %>
 										<p class="title"><%= truncate book.title, length: 24 %></p>
 										<div class="form-group rating-form">
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -54,7 +54,7 @@
 							<% @books.each do |book| %>
 								<div class="col-xs-6 col-sm-4 col-md-3">
 									<div class="sub-book">
-										<%= link_to image_tag(book.image), book %>
+										<%= link_to image_tag(book.image_url), book %>
 										<p class="title"><%= truncate book.title, length: 24 %></p>
 										<div class="form-group rating-form">
 											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
