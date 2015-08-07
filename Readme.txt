@@ -7,3 +7,5 @@ book.image_url
 
 - TODO
 + Validate user
++ Export DB to seed to be enable to import them later
++ create DB
